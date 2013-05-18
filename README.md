@@ -38,10 +38,10 @@ like `handlePagedResourceRetrieval`, `handleSingleResourceRetrieval`,
 
 For access control, there are two beaviors that implement default rules:
 
-1) `RestControllerDefaultAccessRulesBehavior` allows everyone to discover the
+1. `RestControllerDefaultAccessRulesBehavior` allows everyone to discover the
    API and checks for an auth item `rest_{$currentActionId}_{$resourceId}`
    otherwise.
-2) `RestControllerDevelopmentAccessRulesBehavior` grants access to everything,
+2. `RestControllerDevelopmentAccessRulesBehavior` grants access to everything,
    given the request originates from localhost.
 
 `RestController` does also support the concept of "REST behaviors", which is
@@ -66,10 +66,10 @@ paged).
 Last but not least, the REST extension implements a concept of "Message Readers"
 and "Renderers". Those are basically used to read different request types like
 
-1) www-form-urlencoded format
-2) json format
-3) xml messages
-4) ...
+1. www-form-urlencoded format
+2. json format
+3. xml messages
+4. ...
 
 and to respond in a proper format as requested by the client in the
 Accept-Header (parsing not implemented, fallback to json-renderer).
